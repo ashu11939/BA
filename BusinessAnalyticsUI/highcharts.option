@@ -1,0 +1,198 @@
+this.options1 = {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Monthly Stock Report'
+      },
+      xAxis: {
+        min: 0,
+        max: 3,
+        categories: ['BOUNCE-CHOCO CREAM 5 1*144', 'BOUNCE-ELAICHI CREAM 5 1*144', 'CHIPS-5/-MIX 1*120', 'Bingo', 'Ashirvaad', 'Gold Flake', 'Wills']
+      },
+      scrollbar: {
+        enabled: true
+      },
+      yAxis: {
+        title: {
+          text: 'Stock Quantity'
+        }
+      },
+      series: [{
+        type: 'column',
+        name: 'Jan Stock',
+        data: [10, 30, 77, 45, 47, 89, 64, 73]
+      },
+        // {
+        //   type: 'column',
+        //   name: 'Feb Stock',
+        //   data: [47, 89, 64, 73, 10, 30, 77, 45]
+        // },
+        // {
+        //   type: 'column',
+        //   name: 'March stock',
+        //   data: [77, 45, 47, 89,10, 30, 64, 73]
+        // },
+        // {
+        //   //This can be shown as monthly/weekly avg for sales
+        //   type: 'spline',
+        //   name: 'Average',
+        //   data: [10, 30, 77, 45, 47, 89, 64, 73],
+        //   marker: {
+        //     lineWidth: 2,
+        //     lineColor: Highcharts.getOptions().colors[3],
+        //     fillColor: 'white'
+        //   }
+        // }
+      ]
+
+    };
+
+    // this.options2 = {
+    //   title: {
+    //     text: 'Combination chart'
+    //   },
+    //   xAxis: {
+    //     categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+    //   },
+    //   labels: {
+    //     items: [{
+    //       html: 'Total fruit consumption',
+    //       style: {
+    //         left: '50px',
+    //         top: '18px',
+    //         color: 'black'
+    //       }
+    //     }]
+    //   },
+    //   series: [{
+    //     type: 'column',
+    //     name: 'Jane',
+    //     data: [3, 2, 1, 3, 4]
+    //   }, {
+    //     type: 'column',
+    //     name: 'John',
+    //     data: [2, 3, 5, 7, 6]
+    //   }, {
+    //     type: 'column',
+    //     name: 'Joe',
+    //     data: [4, 3, 3, 9, 0]
+    //   }, {
+    //     type: 'spline',
+    //     name: 'Average',
+    //     data: [3, 2.67, 3, 6.33, 3.33],
+    //     marker: {
+    //       lineWidth: 2,
+    //       lineColor: Highcharts.getOptions().colors[3],
+    //       fillColor: 'white'
+    //     }
+    //   }, {
+    //     type: 'pie',
+    //     name: 'Total consumption',
+    //     data: [{
+    //       name: 'Jane',
+    //       y: 13,
+    //       color: Highcharts.getOptions().colors[0] // Jane's color
+    //     }, {
+    //       name: 'John',
+    //       y: 23,
+    //       color: Highcharts.getOptions().colors[1] // John's color
+    //     }, {
+    //       name: 'Joe',
+    //       y: 19,
+    //       color: Highcharts.getOptions().colors[2] // Joe's color
+    //     }],
+    //     center: [100, 80],
+    //     size: 100,
+    //     showInLegend: false,
+    //     dataLabels: {
+    //       enabled: false
+    //     }
+    //   }]
+
+    // }
+
+    this.options2 = {
+      chart: {
+
+        type: 'line',
+
+        zoomType: 'x'
+      },
+      title: {
+        text: 'Project wise Budget Estimation'
+      },
+      subtitle: {
+        text: 'Select area to zoom.Click Reset Zoom to reset selection'
+      },
+      credits: {
+        enabled: true,
+        position: {
+          align: 'right',
+          x: -10,
+          verticalAlign: 'bottom',
+          y: -5
+        },
+        href: "http://www.qualiantech.com",
+        text: "Qualian Technologies Pvt Ltd"
+      },
+      xAxis: {
+        categories: ["W 1, Nov 2010", "W 2, Nov 2010", "W 3, Nov 2010", "W 4, Nov 2010", "W 1, Dec 2010", "W 2, Dec 2010", "W 3, Dec 2010", "W 4, Dec 2010", "W 1, Jan 2011", "W 2, Jan 2011", "W 3, Jan 2011", "W 4, Jan 2011", "W 1, Feb 2011", "W 2, Feb 2011", "W 3, Feb 2011", "W 4, Feb 2011", "W 1, Mar 2011", "W 2, Mar 2011", "W 3, Mar 2011", "W 4, Mar 2011", "W 1, Apr 2011", "W 2, Apr 2011", "W 3, Apr 2011", "W 4, Apr 2011", "W 1, May 2011", "W 2, May 2011", "W 3, May 2011", "W 4, May 2011", "W 1, Jun 2011", "W 2, Jun 2011", "W 3, Jun 2011", "W 4, Jun 2011", "W 1, July 2011", "W 2, July 2011", "W 3, July 2011", "W 4, July 2011", "W 1, Aug 2011", "W 2, Aug 2011", "W 3, Aug 2011", "W 4, Aug 2011", "W 1, Sep 2011", "W 2, Sep 2011", "W 3, Sep 2011", "W 4, Sep 2011", "W 1, Oct 2011", "W 2, Oct 2011", "W 3, Oct 2011", "W 4, Oct 2011", "W 1, Nov 2011", "W 2, Nov 2011", "W 3, Nov 2011", "W 4, Nov 2011", "W 1, Dec 2011", "W 2, Dec 2011", "W 3, Dec 2011", "W 4, Dec 2011", "W 1, Jan 2012", "W 2, Jan 2012", "W 3, Jan 2012", "W 4, Jan 2012", "W 1, Feb 2012", "W 2, Feb 2012", "W 3, Feb 2012", "W 4, Feb 2012", "W 1, Mar 2012", "W 2, Mar 2012", "W 3, Mar 2012", "W 4, Mar 2012", "W 1, Apr 2012", "W 2, Apr 2012", "W 3, Apr 2012", "W 4, Apr 2012", "W 1, May 2012", "W 2, May 2012", "W 3, May 2012", "W 4, May 2012", "W 1, Jun 2012", "W 2, Jun 2012", "W 3, Jun 2012", "W 4, Jun 2012", "W 1, July 2012", "W 2, July 2012", "W 3, July 2012", "W 4, July 2012", "W 1, Aug 2012", "W 2, Aug 2012", "W 3, Aug 2012", "W 4, Aug 2012"],
+        min: 0,
+        max: 9
+
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Amount Distribution'
+        }
+      },
+      legend: {
+        shadow: true
+      },
+      tooltip: {
+        useHTML: true,
+        headerFormat: '<small>{point.key}</small><table>',
+        pointFormat: '<tr><td style="color: {series.color}">{series.name}:{point.y} </td>',
+        footerFormat: '</table>',
+        valueDecimals: 2,
+        crosshairs: [{
+          width: 1,
+          color: 'Gray'
+        }, {
+          width: 1,
+          color: 'gray'
+        }]
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0.5
+        }
+      },
+      series: [{
+        name: 'Petty Cash',
+        data: [0, 0, 8, 10, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+      }],
+
+
+
+      scrollbar: {
+        enabled: true,
+        barBackgroundColor: 'gray',
+        barBorderRadius: 7,
+        barBorderWidth: 0,
+        buttonBackgroundColor: 'gray',
+        buttonBorderWidth: 0,
+        buttonArrowColor: 'yellow',
+        buttonBorderRadius: 7,
+        rifleColor: 'yellow',
+        trackBackgroundColor: 'white',
+        trackBorderWidth: 1,
+        trackBorderColor: 'silver',
+        trackBorderRadius: 7
+      }
+
+    }
+  }
