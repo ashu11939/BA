@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col-md-8 mr-auto ml-auto">
+    <h3 class="title">Stock Analysis</h3>
+    <h4 class="description">This is the paragraph where you can write more details about your product. Keep you user
+      engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he
+      wouldn't scroll to get here. Add a button if you want the user to see more.</h4>
+    <br>
+    <a class="btn btn-danger btn-round" (click)="showStockReport()">See Details</a>
+  </div>
+</div>
+<br /><br />
+<div *ngIf="showStockAnalysis">
+<div class="row">
+  <!-- #### column graph for Qty vs stock ####-->
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-header card-header-warning card-header-icon">
+        <div class="card-icon">
+          <h6>Max Of All</h6>
+        </div>
+        <p class="card-category">Quantity/Cost</p>
+        <h3 class="card-title">247/2,30,500 Inr
+        </h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <a>Wills</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-header card-header-warning card-header-icon">
+        <div class="card-icon">
+          <h6>Min Of All</h6>
+        </div>
+        <p class="card-category">Quantity/Cost</p>
+        <h3 class="card-title">24/5,600 Inr
+        </h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <a>Sunfeast</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-header card-header-success card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">store</i>
+        </div>
+        <p class="card-category">Cost</p>
+        <h3 class="card-title">4,24,53,456 Inr</h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <a>All Products Value</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-header card-header-success card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">store</i>
+        </div>
+        <p class="card-category">Revenue</p>
+        <h3 class="card-title">$34,245</h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">date_range</i> Last 24 Hours
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 mr-auto ml-auto">
+    <chart [options]="options2"></chart>
+  </div>
+</div>
+</div>

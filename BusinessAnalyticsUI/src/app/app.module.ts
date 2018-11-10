@@ -9,6 +9,10 @@ import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { StockAnalysisComponent } from './products/stock-analysis/stock-analysis.component';
+import { CustomerAnalysisComponent } from './products/customer-analysis/customer-analysis.component';
+import { StatsBoxComponent } from './shared/components/stats-box/stats-box.component';
+import { AboutUsComponent } from './shared/about-us/about-us.component';
 
 declare var require: any;
 @NgModule({
@@ -16,7 +20,11 @@ declare var require: any;
     AppComponent,
     LandingComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    StockAnalysisComponent,
+    CustomerAnalysisComponent,
+    StatsBoxComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
