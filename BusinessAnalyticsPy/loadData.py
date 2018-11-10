@@ -34,9 +34,9 @@ class LoadData:
         for index in range((len(keysArr))):
             print(keysArr[index])
             if (len(data) == 0):
-                data = "'" + keysArr[index] + "':" + valuesArr[index]
+                data = '"' + keysArr[index] + '":' + valuesArr[index]
             else:
-                data = data + ",'" + keysArr[index] + "':" + valuesArr[index]
+                data = data + ',"' + keysArr[index] + '":' + valuesArr[index]
         data = "{" + data + "}"
         return data
 
@@ -63,8 +63,8 @@ customerLedger = loadDataObject.loadCsvData(customerLedgerURI, 3)
 customerLedgerDF = loadDataObject.convertCSVToDataFrame(customerLedger)
 
 # List all headers available
-print(customerLedgerDF.columns.tolist())
-print(customerLedgerDF['LEDGER'][5])
+#print(customerLedgerDF.columns.tolist())
+#print(customerLedgerDF['LEDGER'][5])
 
 # To know data tyoe of column
 # print(customerLedger['LEDGER'].dtypes)
