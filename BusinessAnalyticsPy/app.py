@@ -1,11 +1,15 @@
-from flask import Flask
+from flask import Flask, request
 from datetime import datetime
 import re
 from loadData import LoadData
+from flask import Response
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 loadData = LoadData()
-@app.route("/")
+@app.route("/",methods = ['POST', 'GET'])
 def home():
 
     stockStatementURI = 'C:\\Users\\Ashutosh\\workspace\\BusinessAnalytics\\local\\BusinessAnalyticsPy\\fwdlezarstock\\STOCK-3010.csv'
@@ -21,6 +25,8 @@ def home():
     data = loadData.convertToJsonObject(["products", "cost"], [product.to_json(), cost.to_json()])
     product.to_json()
     # data = '{"products":' + product.to_json() + ',"cost":' + cost.to_json() + "}"
+    
+    ######## Max / Min Values from list starts #########
     stockList = stockStatementDF['Current Stock']
     maxValue = loadData.maxValueFromlist(stockList)
     minValue = loadData.minValueFromList(stockList)
@@ -28,12 +34,26 @@ def home():
     minValueId = loadData.minValueIDFromList(stockList)
     maxRowData = stockStatementDF.loc[(stockStatementDF['Current Stock'] == maxValue)]
     minRowData = stockStatementDF.loc[(stockStatementDF['Current Stock'] == minValue)]
-    
     rowData = loadData.getRowFromDataframe(stockStatementDF, maxValueId)
+    #print(stockStatementDF.loc[maxValueId]) 
+    ######## Max / Min Values from list ends #########
+    
 
-    print(stockStatementDF.loc[maxValueId]) 
-    print(stockStatementDF.loc[minValueId]) 
-    return rowData.to_json()
+    ######## Product(X) vs Stock(Y) starts ########
+
+    productVsStock = loadData.convertToJsonObject(["products", "stock"], [product.to_json(), stockList.to_json()])
+  
+    ######## Product(X) vs Stock(Y) ends ###########
+    
+    ######## Product(X) vs StockValue(Y) starts ########
+
+    productVsStockValue = loadData.convertToJsonObject(["products", "cost"], [product.to_json(), cost.to_json()])
+
+    ######## Product(X) vs StockValue(Y) ends ###########
+
+    #show data in tabular form from CSV stockStatementDF.to_json()
+    print(request.get_json())
+    return Response(productVsStock, mimetype='application/json')
 
 
 @app.route("/hello/<name>")
